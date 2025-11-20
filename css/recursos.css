@@ -1,0 +1,976 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&family=Pacifico&display=swap');
+/*background-image: linear-gradient(270deg, #100d28,#8906e6);*/
+body {
+  background-color: white;
+  max-height: 100%;
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+/*mexi para deixar o menu fixo: position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  */
+ /*inicio menus*/
+ header{
+  position: relative;
+  position: fixed;
+  z-index:2 ;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #210037;
+  box-shadow: 0px 3px 10px #464646;
+}
+
+/*background-image: linear-gradient(90deg, #a9016d, #040405);*/
+
+.nav-bar{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem 6rem;
+    height: 80px;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo h1{
+    color: #fff;
+}
+
+.nav-list{
+    display: flex;
+    align-items: center;
+    
+   
+}
+
+
+.nav-list ul:hover{
+  color: #000;
+}
+
+.nav-list ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    
+  
+}
+
+.nav-item{
+    margin: 15px;
+    transition-duration: .25s;
+    padding: 10px;
+    
+  
+   
+}
+
+.nav-item:hover{
+  background-color: #CFD8DC;
+
+    
+
+}
+.nav-link:hover{
+  color: black;
+  
+}
+
+.nav-link{
+    text-decoration: none;
+    font-size: 1.15rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+/*botão do pânico*/
+
+.login-button{
+  margin-left: -100px;
+
+}
+
+.login-button button{
+  background-color: crimson;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+  font-weight:bolder ;
+  font-size: 1rem;
+}
+
+.login-button button:hover{
+  transition: all 0.5s ease-out;
+  transform: scale(1.2);
+  color: plum;
+}
+
+/*fim do botão do pânico*/
+
+.mobile-menu-icon{
+    display: none;
+}
+
+.mobile-menu{
+    display: none;
+}
+
+@media screen and (max-width: 730px) {
+    .nav-bar{
+        padding: 1.5rem 4rem;
+    }
+    
+    .mobile-menu-icon{
+        display: block;
+    }
+    .mobile-menu-icon button{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
+    .mobile-menu ul{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding-bottom: 1rem;
+    }
+
+    .mobile-menu .nav-item{
+        display: block;
+        padding: 1.2rem;
+    }
+    .mobile-menu .login-button{
+        display: block;
+        padding: 1rem 2rem;
+    }
+    .mobile-menu .login-button button{
+        width: 100%;
+    }
+    .open{
+        display: block;
+    }
+}
+
+
+/*menu hamburguer*/
+  /*teste menu hamburguer*/
+
+  .hamburger-menu{
+    position: absolute;
+
+  }
+  
+  #menu__toggle {
+    opacity: 0;
+ 
+    
+  }
+  #menu__toggle:checked + .menu__btn > span {
+    transform: rotate(45deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::before {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  #menu__toggle:checked + .menu__btn > span::after {
+    top: 0;
+    transform: rotate(90deg);
+  }
+  #menu__toggle:checked ~ .menu__box {
+    left: 0 !important;
+  }
+  .menu__btn {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+    z-index: 4;
+  }
+  .menu__btn > span,
+  .menu__btn > span::before,
+  .menu__btn > span::after {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    transition-duration: .25s;
+  }
+  .menu__btn > span::before {
+    content: '';
+    top: -8px;
+  }
+  .menu__btn > span::after {
+    content: '';
+    top: 8px;
+  }
+  .menu__box {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 300px;
+    height: 100%;
+    margin: 0;
+    padding: 80px 0;
+    list-style: none;
+    background-color: #210037;
+    box-shadow: 2px 2px 6px rgba(0, 0, 0, .4);
+    transition-duration: .25s;
+    z-index: 3;
+  }
+  .menu__item {
+    display: block;
+    padding: 12px 24px;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+    transition-duration: .25s;
+  }
+  .menu__item:hover {
+    background-color: #CFD8DC;
+    color: black;
+  }
+/*fim menus*/
+
+    .geral{
+      height: 100%;
+      margin-top: 30px;
+    }
+
+    .container1{
+      display: flex;
+    }
+  
+    .box1{
+      background-color: #550c86;
+      width: 1000px;
+      height: 800px;
+    }
+  
+    .box1 h1{
+      color: #210037;
+      margin-top: 150px;
+      height: 80px;
+      width: 500px;
+      margin-left: 100px;
+      background-color:#a98edd;
+      border-radius: 20px;
+      font-weight: bolder;
+      font-size: 40px;
+      text-align: center;
+      padding-top:10px ;
+    }
+
+    .img_seta img{
+      height: 150px;
+      width: 260px;
+      margin-left: 150px;
+      margin-top: 20px;
+
+    }
+
+    .mulher_negra img{
+      height: 300px;
+      width: 300px;
+     margin-top: 100px;
+     margin-left: -20px;
+    }
+
+    .box2{
+      width: 1000px; 
+      height: 800px;
+      background-color: #a26cd0;
+      
+     
+    }
+  
+    .box2 h2{
+      margin-top: 100px;
+      width: 400px;
+      font-size: 40px;
+      color: white;
+      font-weight: bolder;
+      padding-left: 10px;
+      margin-left: 60px;
+    }
+
+    .content2{
+      width: 550px;
+      height: 300px;
+      margin-left: 50px;
+      background-color: #4e0082;
+      border-radius: 20px;
+    }
+  
+    .content2 p{
+      margin-top: 70px;
+      color: white;
+      font-size: 25px;
+      padding: 10px 10px 0 20px;
+    }
+
+    .descricao2{
+      margin-top: 50px;
+    }
+  
+    .container2{
+      display: flex;
+      height: 300px;
+      /*background-color: ;se não quiser usar a imagem de fundo, é só apagar da body e coloar uma cor aqui*/
+      
+    }
+
+    footer{
+
+    }
+
+    @media screen and (min-width: 1025px){
+     .geral{
+      margin-bottom: - 100px;
+     }
+    }
+  
+  
+
+    /*responividade para tablet*/
+
+    @media screen and (max-width: 1024px){
+      .container1{
+        flex-direction: column;
+        
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: 100%;
+
+      }
+
+      .box1{
+        display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+                width: 100%;
+      }
+
+      .img_seta{
+        display: none;
+      }
+
+      .box2{
+        display: flex
+;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -40px;
+        width: 100%;
+       
+      }
+
+      .box2 h2{
+        margin-top: -300px;
+      }
+
+      .content2{
+        margin-top: 20px;
+      }
+
+
+      .content2 p{
+        margin-top: 20px;
+      }
+
+      footer{
+        margin-top: 820px;
+
+      }
+
+
+
+
+    }
+
+    
+    @media screen and (max-width: 768px){
+       body{
+        height: max-content;
+       }
+
+      .container1{
+        flex-direction: column;
+        
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: 100%;
+
+      }
+
+      .box1{
+        display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 2rem;
+                width: 100%;
+      }
+
+      .img_seta{
+        display: none;
+      }
+
+      .box2{
+        display: flex
+;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: -40px;
+        width: 100%;
+       
+      }
+
+      .box2 h2{
+        margin-top: -300px;
+      }
+
+      .content2{
+        margin-top: 20px;
+      }
+
+
+      .content2 p{
+        margin-top: 20px;
+      }
+
+      footer{
+        margin-top: 550px;
+      }
+
+
+
+
+    }
+  
+  
+  
+  
+
+
+
+/*responividade para celular*/
+    @media screen and (max-width: 480px) {
+      
+      .geral{
+        margin-top: auto;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: 100%;
+        min-width: 320px;
+        max-width: 1200px;
+        height: 100%;
+       
+      }
+
+
+      .container1{
+        flex-direction: column;
+
+      }
+
+      .box1{
+        flex-wrap: wrap;
+        
+        width: 100%;
+        min-width: 320px;  /* Garante que a div não fique menor que 320px */
+        max-width: 1200px; /* Garante que a div não fique maior que 1200px */
+        margin: 0 auto;    /* Centraliza a div horizontalmente */
+
+      }
+
+      .box1 h1{
+        height: 125px;
+        width: 300px;
+        
+        font-size: 40px;
+        color: white;
+        font-family: "Bebas Neue", sans-serif;
+        text-align: center;       /* Centraliza o texto */
+        margin: 0;                /* Remove margens */
+        padding: 0; 
+        margin-top: 100px;              /* Remove o preenchimento, se necessário */
+
+      }
+
+      .img_seta{
+        display: none;
+      }
+
+      .mulher_negra{
+        text-align: center;       /* Centraliza o texto */
+        margin: 0;                /* Remove margens */
+        padding: 0; 
+      }
+
+      
+     
+      
+      .box2{
+        height: 100%;
+        width: 100%;
+        min-width: 320px;  /* Garante que a div não fique menor que 320px */
+        max-width: 1200px; /* Garante que a div não fique maior que 1200px */
+        margin: 0 auto;    /* Centraliza a div horizontalmente */
+        margin-top: -50px;
+        padding-bottom: 50px ;
+
+
+      }
+
+      .box2 h2{
+        font-size: 30px;
+        text-align: center;       /* Centraliza o texto */
+        margin: 0;                /* Remove margens */
+        padding: 0; 
+        margin-top: 50px;
+      }
+
+      .content2{
+        width: 75%;
+        height: 300px;
+              /* Centraliza o texto */
+        margin: 0;                /* Remove margens */
+        padding: 0;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+      }
+
+      .content2 p{
+        font-size: 20px;
+        margin-top: 20px;
+      }
+
+      .descricao2{
+        margin-top: -20px;
+      }
+
+      .nav-item{
+        margin-left: -3px;
+        margin-top: 100px;
+
+      }
+
+      .nav-link{
+        margin: 0;
+        text-align: center;
+      }
+
+      .nav-bar{
+        font-size: 5px;
+        padding: 0.3rem 0.3rem;
+        margin-top: 50px;
+
+      }
+      .nav-list{
+        word-spacing: -2px;
+      }
+
+      .login-button{
+        margin-left: -250px; 
+        height: 100%;
+      }
+    
+      .login-button button{
+        width: 200px;
+      }
+
+      .logo{
+        display: none;
+      }
+
+      .icon{
+        display: none;
+      }
+
+      header{
+        
+        width: 100%;
+        height: 170px;
+        min-width: 320px;  /* Garante que a div não fique menor que 320px */
+        max-width: 1200px; /* Garante que a div não fique maior que 1200px */
+        
+       
+      }
+
+      footer{
+        width: 100%;
+        min-width: 320px;  /* Garante que a div não fique menor que 320px */
+        max-width: 1200px; /* Garante que a div não fique maior que 1200px */
+        height: max-content;
+        margin-top: 0;
+  
+       
+      }
+
+      
+.logo-3-footer{
+  margin-top: 0;
+  
+
+}
+
+    }
+
+    @media screen and (max-width: 360px) {
+
+      footer{
+        width: 100%;
+        min-width: 320px;  /* Garante que a div não fique menor que 320px */
+        max-width: 1200px; /* Garante que a div não fique maior que 1200px */
+        margin-top: 0;
+      
+       
+      }
+           
+.logo-3-footer{
+  margin-top: 0;
+  
+
+}
+    }
+
+
+
+
+
+
+    @media screen  and (max-width: 360px){
+
+    
+      /*cabeçalho*/
+    
+    .nav-item{
+     margin-left: -3px;
+     margin-top: 50px;
+    
+    }
+    
+    .nav-link{
+     margin: 0;
+     text-align: center;
+     font-size: 16px;
+     
+    
+    
+    }
+    
+    .nav-bar{
+     font-size: 5px;
+     padding: 0.3rem 0.3rem;
+     margin-top: 50px;
+     display: flex;
+     justify-content: center; /* Centraliza horizontalmente */
+     align-items: center;      /* Centraliza verticalmente (opcional) */
+     margin-left: -45px;
+    
+    }
+    .nav-list{
+     word-spacing: -2px;
+     gap: 3px;
+    
+     
+     
+    }
+    
+    .nav-list ul li{
+     margin: 0;       /* Remove espaço externo */
+     padding: 2px ;  /* Ajusta o espaço interno */
+     margin-left: 20px;
+     
+    }
+    
+    .login-button{
+     margin-bottom: 40px;
+    }
+    
+    
+    
+    
+    .logo{
+     display: none;
+    }
+    
+    .icon{
+     display: none;
+    }
+    
+    header{
+     
+     width: 100%;
+     min-width: 320px;  /* Garante que a div não fique menor que 320px */
+     max-width: 1200px; /* Garante que a div não fique maior que 1200px */
+    
+    }
+    
+    
+    
+    
+    .login-button{
+     margin-top: -50px;
+     margin-left: -220px;
+     height: 100%;
+    }
+    
+    .logo{
+     display: none;
+    }
+    
+    .icon{
+     display: none;
+    }
+    
+    /* fim cabeçalho*/
+    
+    
+    
+    }
+    
+    
+    @media screen and (max-width: 720px) and (max-height: 1600px){
+
+       
+      .geral{
+        margin-top: auto;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+        width: 100%;
+        width: 100%;
+        min-width: 320px;
+        max-width: 1200px;
+        height: 100%;
+       
+      }
+
+
+      .container1{
+        flex-direction: column;
+
+      }
+
+      .box1{
+        flex-wrap: wrap;
+        
+        width: 100%;
+        min-width: 320px;  /* Garante que a div não fique menor que 320px */
+        max-width: 1200px; /* Garante que a div não fique maior que 1200px */
+        margin: 0 auto;    /* Centraliza a div horizontalmente */
+
+      }
+
+      .box1 h1{
+        height: 120px;
+        width: 300px;
+        
+        font-size: 40px;
+        color: white;
+        font-family: "Bebas Neue", sans-serif;
+        text-align: center;       /* Centraliza o texto */
+        margin: 0;                /* Remove margens */
+        padding: 0; 
+        margin-top: 100px;              /* Remove o preenchimento, se necessário */
+
+      }
+
+      .img_seta{
+        display: none;
+      }
+
+      .mulher_negra{
+        text-align: center;       /* Centraliza o texto */
+        margin: 0;                /* Remove margens */
+        padding: 0; 
+      }
+
+      
+     
+      
+      .box2{
+        height: 100%;
+        width: 100%;
+        min-width: 320px;  /* Garante que a div não fique menor que 320px */
+        max-width: 1200px; /* Garante que a div não fique maior que 1200px */
+        margin: 0 auto;    /* Centraliza a div horizontalmente */
+        margin-top: -50px;
+        padding-bottom: 50px ;
+
+
+      }
+
+      .box2 h2{
+        font-size: 30px;
+        text-align: center;       /* Centraliza o texto */
+        margin: 0;                /* Remove margens */
+        padding: 0; 
+        margin-top: 50px;
+      }
+
+      .content2{
+        width: 75%;
+        height: 300px;
+              /* Centraliza o texto */
+        margin: 0;                /* Remove margens */
+        padding: 0;
+        margin-top: 50px;
+        margin-bottom: 50px;
+
+      }
+
+      .content2 p{
+        font-size: 20px;
+        margin-top: 20px;
+      }
+
+      .descricao2{
+        margin-top: -20px;
+      }
+
+      .nav-item{
+        margin-left: -3px;
+
+      }
+
+      .nav-link{
+        margin: 0;
+        text-align: center;
+      }
+
+      .nav-bar{
+        font-size: 5px;
+        padding: 0.3rem 0.3rem;
+        margin-top: 50px;
+
+      }
+      .nav-list{
+        word-spacing: -2px;
+      }
+
+      .login-button{
+        margin-left: -250px; 
+        height: 100%;
+      }
+    
+      .login-button button{
+        width: 200px;
+      }
+
+      .logo{
+        display: none;
+      }
+
+      .icon{
+        display: none;
+      }
+
+      header{
+        
+        width: 100%;
+        min-width: 320px;  /* Garante que a div não fique menor que 320px */
+        max-width: 1200px; /* Garante que a div não fique maior que 1200px */
+       
+      }
+
+      footer{
+        width: 100%;
+        min-width: 320px;  /* Garante que a div não fique menor que 320px */
+        max-width: 1200px; /* Garante que a div não fique maior que 1200px */
+        height: max-content;
+        margin-top: 0;
+  
+       
+      }
+
+      
+.logo-3-footer{
+  margin-top: 0;
+  
+
+}
+
+    }
+
+     @media screen and (max-width: 768px) and (max-height: 1600px){
+       
+      /*menu*/
+
+.nav-item{
+  margin-left: -3px;
+  margin-top: 100px;
+
+}
+
+.nav-link{
+  margin: 0;
+  text-align: center;
+}
+
+.nav-bar{
+  font-size: 5px;
+  padding: 0.3rem 0.3rem;
+  margin-top: 50px;
+
+}
+.nav-list{
+  word-spacing: -2px;
+}
+.login-button{
+ 
+ 
+ margin-left: -220px;
+ height: 100%;
+}
+
+.login-button button{
+ 
+  width: 200px;
+}
+
+.logo{
+  display: none;
+}
+
+.icon{
+  display: none;
+}
+
+header{
+  
+  width: 100%;
+  min-width: 320px;  /* Garante que a div não fique menor que 320px */
+  max-width: 1200px; /* Garante que a div não fique maior que 1200px */
+  height: 170px;
+ 
+}
+
+
+
+
+
+     }
